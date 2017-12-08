@@ -11,9 +11,24 @@
 |
 */
 
-Route::get('/', function(){
-	return view('Backstage.index');
-});
-Route::resource('/focus','FocusController');
-Route::resource('/pro','ProController');
+// Route::get('', function(){
+// 		return view('Index.index');
+// 	});
+//后台路由组
+Route::group([],function(){
+	Route::get('/admin', function(){
+		return view('admin.index');
+	});
+	Route::resource('/admin/focus','FocusController');
+	Route::resource('/admin/series','SeriesController');
+	Route::resource('/admin/team','TeamController');
+	Route::resource('/admin/news','NewsController');
+	Route::resource('/admin/partners','PartnersController');
 
+});
+//前台路由组
+Route::group([],function(){
+	Route::get('/','IndexController@index');
+	
+
+});

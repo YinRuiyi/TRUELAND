@@ -1,7 +1,7 @@
 <div id="sidebar" class="sidebar responsive">
 	<ul class="nav nav-list">
 		<li class="active">
-			<a href="/">
+			<a href="/admin">
 				<i class="menu-icon fa fa-tachometer"></i>
 				<span class="menu-text"> 总控制台 </span>
 			</a>
@@ -9,7 +9,7 @@
 			<b class="arrow"></b>
 		</li>
 		<li class="">
-			<a href="/focus" class="dropdown-toggle">
+			<a href="#" class="dropdown-toggle">
 				<i class="menu-icon fa fa-desktop"></i>
 				<span class="menu-text"> 首页 </span>
 
@@ -20,7 +20,7 @@
 
 			<ul class="submenu">
 				<li class="">
-					<a href="#" class="dropdown-toggle">
+					<a href="" class="dropdown-toggle">
 						<i class="menu-icon fa fa-caret-right"></i>
 						轮播图
 						<b class="arrow fa fa-angle-down"></b>
@@ -30,7 +30,7 @@
 
 					<ul class="submenu">
 						<li class="">
-							<a href="/focus/create">
+							<a href="/admin/focus/create">
 								<i class="menu-icon fa fa-leaf green"></i>
 								图片添加
 							</a>
@@ -38,7 +38,7 @@
 							<b class="arrow"></b>
 						</li>
 						<li class="">
-							<a href="/focus">
+							<a href="/admin/focus">
 								<i class="menu-icon fa fa-leaf green"></i>
 								图片列表
 							</a>
@@ -50,7 +50,7 @@
 				<li class="">
 					<a href="" class="dropdown-toggle">
 						<i class="menu-icon fa fa-caret-right"></i>
-						PRO
+						SERIES
 						<b class="arrow fa fa-angle-down"></b>
 					</a>
 
@@ -58,7 +58,7 @@
 
 					<ul class="submenu">
 						<li class="">
-							<a href="/pro/create">
+							<a href="/admin/series/create">
 								<i class="menu-icon fa fa-leaf green"></i>
 								内容添加
 							</a>
@@ -66,9 +66,93 @@
 							<b class="arrow"></b>
 						</li>
 						<li class="">
-							<a href="/pro">
+							<a href="/admin/series">
 								<i class="menu-icon fa fa-leaf green"></i>
 								内容列表
+							</a>
+
+							<b class="arrow"></b>
+						</li>
+					</ul>
+				</li>
+				<li class="">
+					<a href="" class="dropdown-toggle">
+						<i class="menu-icon fa fa-caret-right"></i>
+						TEAM
+						<b class="arrow fa fa-angle-down"></b>
+					</a>
+
+					<b class="arrow"></b>
+
+					<ul class="submenu">
+						<li class="">
+							<a href="/admin/team/create">
+								<i class="menu-icon fa fa-leaf green"></i>
+								成员添加
+							</a>
+
+							<b class="arrow"></b>
+						</li>
+						<li class="">
+							<a href="/admin/team">
+								<i class="menu-icon fa fa-leaf green"></i>
+								成员列表
+							</a>
+
+							<b class="arrow"></b>
+						</li>
+					</ul>
+				</li>
+				<li class="">
+					<a href="" class="dropdown-toggle">
+						<i class="menu-icon fa fa-caret-right"></i>
+						新闻
+						<b class="arrow fa fa-angle-down"></b>
+					</a>
+
+					<b class="arrow"></b>
+
+					<ul class="submenu">
+						<li class="">
+							<a href="/admin/news/create">
+								<i class="menu-icon fa fa-leaf green"></i>
+								新闻添加
+							</a>
+
+							<b class="arrow"></b>
+						</li>
+						<li class="">
+							<a href="/admin/news">
+								<i class="menu-icon fa fa-leaf green"></i>
+								新闻管理
+							</a>
+
+							<b class="arrow"></b>
+						</li>
+					</ul>
+				</li>
+				<li class="">
+					<a href="" class="dropdown-toggle">
+						<i class="menu-icon fa fa-caret-right"></i>
+						合作伙伴
+						<b class="arrow fa fa-angle-down"></b>
+					</a>
+
+					<b class="arrow"></b>
+
+					<ul class="submenu">
+						<li class="">
+							<a href="/admin/partners/create">
+								<i class="menu-icon fa fa-leaf green"></i>
+								伙伴添加
+							</a>
+
+							<b class="arrow"></b>
+						</li>
+						<li class="">
+							<a href="/admin/partners">
+								<i class="menu-icon fa fa-leaf green"></i>
+								伙伴管理
 							</a>
 
 							<b class="arrow"></b>

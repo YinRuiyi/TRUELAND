@@ -15,8 +15,8 @@ class FocusController extends Controller
     public function index()
     {
 
-    	$focus = DB::table('focus')->paginate(5);
-        return view('Backstage.Focus.index',[
+    	$focus = DB::table('focus')->orderBy('id')->paginate(5);
+        return view('Admin.Focus.index',[
         'focus'=>$focus
         ]);
     }
@@ -29,7 +29,7 @@ class FocusController extends Controller
     public function create()
     {
 
-        return view('Backstage.Focus.create');
+        return view('Admin.Focus.create');
     }
 
     /**
@@ -58,10 +58,12 @@ class FocusController extends Controller
        		
 
        		if (DB::table('focus')->insert($data)) {
-	            return redirect('focus')->with('msg','添加成功');
+	            return redirect('admin/focus')->with('msg','添加成功');
 	        }else{
-                return redirect('focus')->with('msg','添加失败');
+                return redirect('admin/focus')->with('msg','添加失败');
             }
+        }else{
+            return redirect('admin/focus')->with('msg','添加失败');
         }
 
     }
@@ -76,7 +78,7 @@ class FocusController extends Controller
     {
         $focus = DB::table('focus')->where('id',$id)->get();
 
-        return view('Backstage.Focus.show',[
+        return view('Admin.Focus.show',[
         'focus'=>$focus
         ]);
     }
@@ -91,7 +93,7 @@ class FocusController extends Controller
     {
     	$focus = DB::table('focus')->where('id',$id)->get();
 
-        return view('Backstage.Focus.edit',[
+        return view('Admin.Focus.edit',[
         'focus'=>$focus
         ]);
     }
@@ -108,10 +110,23 @@ class FocusController extends Controller
         
         $data = $request->except(['_token','_method']);
 
+        if($request->hasFile('focus')){
+            $suffix = $request->file('focus')->extension();
+
+            $name = uniqid("img_").'.'.$suffix;
+
+            $dir = './uploads/Focus/'.date('Y-m-d');
+
+            $request->file('focus')->move($dir,$name);
+
+            $data['focus'] = trim($dir.'/'.$name,'.');
+            
+        }
+
 		if (DB::table('focus')->where('id',$id)->update($data)) {
-			return redirect('focus')->with('msg','更新成功..');
+			return redirect('admin/focus')->with('msg','更新成功..');
         }else{
-           return redirect('focus')->with('msg','您没有更新哦=￣ω￣=');
+           return redirect('admin/focus')->with('msg','您没有更新哦=￣ω￣=');
         }
         
     }
