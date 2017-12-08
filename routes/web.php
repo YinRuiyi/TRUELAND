@@ -19,6 +19,7 @@ Route::group([],function(){
 	Route::get('/admin', function(){
 		return view('admin.index');
 	});
+	Route::resource('/admin/user','UserController');
 	Route::resource('/admin/focus','FocusController');
 	Route::resource('/admin/series','SeriesController');
 	Route::resource('/admin/team','TeamController');

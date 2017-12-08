@@ -110,7 +110,9 @@
 					<ul class="breadcrumb">
 						<li>
 							<i class="ace-icon fa fa-home home-icon"></i>
+							@section('title')
 							<a href="/admin">UI库首页</a>
+							@show
 						</li>
 					</ul><!-- /.breadcrumb -->
 
@@ -139,7 +141,9 @@
 								<!-- PAGE CONTENT BEGINS -->
 								
 								<div class="row center">
+									@section('img1')
 									<img src="/assets/avatars/logo_2.png" />
+									@show
 								</div><!-- /.row -->
 									
 								<!-- PAGE CONTENT ENDS -->
