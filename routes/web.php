@@ -33,4 +33,4 @@ Route::group([],function(){
 Route::group([],function(){
 	Route::get('/','IndexController@index');
 	Route::get('/fuwu','IndexController@fuwu');
-});
+});         
