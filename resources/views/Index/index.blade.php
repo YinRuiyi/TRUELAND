@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>婚纱主题</title>
+	<title>@section('title')婚纱主题@show</title>
 	<link rel="stylesheet" href="home/css/bootstrap.css">
 	<script src="home/js/jquery.js"></script>
 	<script src="home/js/bootstrap.js"></script>

@@ -83,7 +83,7 @@
 								<li>
 									<a href="/#">
 										<i class="ace-icon fa fa-power-off"></i>
-										登出
+										登录
 									</a>
 								</li>
 							</ul>
