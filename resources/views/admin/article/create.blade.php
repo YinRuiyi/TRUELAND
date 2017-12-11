@@ -32,10 +32,6 @@
                                 <label>文章内容</label>
                                 <input class="form-control" name="content">
                             </div>
-                            <div class="form-group">
-                                <label>文章状态</label>
-                                <input class="form-control" name="status">
-                            </div>
 
                             {{csrf_field()}}
                             <button type="submit" class="btn btn-white btn-info btn-bold menu-icon fa  fa-folder-open-o"> 添加</button>

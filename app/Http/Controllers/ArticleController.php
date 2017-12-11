@@ -37,7 +37,7 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         //
-        $data=$request->only(['title','author','content','status']);
+        $data=$request->only(['title','author','content']);
 
         //文件上传
         if($request->hasFile('pic')){
